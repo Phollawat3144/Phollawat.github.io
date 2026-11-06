@@ -1,0 +1,223 @@
+/* จุดประสงค์: จัดรูปแบบส่วนท้ายเว็บไซต์ ลิงก์ และข้อมูลติดต่อ */
+/* โครงสร้างและพื้นหลังของส่วนท้ายเว็บไซต์ */
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    background: #102b2a;
+    color: #f7fbfa;
+    padding: 4rem 0 1.5rem;
+}
+
+.site-footer::before {
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(0, 102, 100, 0.22);
+    content: "";
+}
+
+.footer-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ตราสัญลักษณ์และคำอธิบายโครงการ */
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.footer-brand-mark {
+    position: relative;
+    display: block;
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.72);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,.2);
+}
+
+.footer-brand-mark img {
+    position: absolute;
+    top: -19px;
+    left: -9px;
+    width: 222px;
+    max-width: none;
+    height: auto;
+}
+
+.footer-brand-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.footer-brand-copy strong {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+.footer-brand-copy span {
+    color: #b8d3d0;
+    font-size: 0.85rem;
+    letter-spacing: 0.025em;
+}
+
+.footer-title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.footer-subtitle {
+    margin: 0.25rem 0 0;
+    color: #b8d3d0;
+    font-size: 0.9rem;
+}
+
+.footer-description {
+    max-width: 360px;
+    margin: 1rem 0 0;
+    color: #c9d9d7;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.footer-heading {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ลิงก์และข้อมูลในส่วนท้าย */
+.footer-links {
+    display: grid;
+    gap: 0.72rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links a,
+.footer-links button {
+    color: #c9d9d7;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible,
+.footer-links button:hover,
+.footer-links button:focus-visible {
+    color: #ffffff;
+}
+
+.footer-service-list {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.footer-service-item {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    color: #c9d9d7;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.footer-service-item span {
+    display: inline-flex;
+    flex: 0 0 28px;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #80d8d1;
+}
+
+.footer-contact-list {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    color: #c9d9d7;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.footer-contact-list svg {
+    flex: 0 0 auto;
+    margin-top: 0.15rem;
+    color: #80d8d1;
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #a8c2bf;
+    font-size: 0.84rem;
+}
+
+.footer-credit {
+    display: inline-block;
+    margin-left: 0.65rem;
+    padding-left: 0.65rem;
+    border-left: 1px solid rgba(255,255,255,.25);
+}
+
+.footer-bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+}
+
+.footer-bottom a {
+    color: #b8d3d0;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
+    color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+    /* โครงสร้างและพื้นหลังของส่วนท้ายเว็บไซต์ */
+.site-footer {
+        padding-top: 3rem;
+    }
+
+    .footer-credit {
+        display: block;
+        margin: 0.35rem 0 0;
+        padding: 0;
+        border: 0;
+    }
+}

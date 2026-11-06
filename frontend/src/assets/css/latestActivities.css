@@ -1,0 +1,211 @@
+/* จุดประสงค์: จัดรูปแบบรายการกิจกรรมล่าสุดและการ์ดกิจกรรมบนหน้าแรก */
+/* กรอบและหัวข้อรายการกิจกรรมล่าสุด */
+.latest-section{
+
+    padding:120px 0;
+
+    background:#f8fafc;
+
+}
+
+.home-activities-section {
+    width: 100%;
+    padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(7rem, 10vw, 9rem);
+    background: #eef7f4;
+}
+
+.home-activities-title {
+    color: #006664;
+}
+
+.home-upcoming-section {
+    background: #ffffff;
+}
+
+.home-upcoming-card-accent {
+    height: 8px;
+    background: linear-gradient(90deg, #006664, #b2bb1e);
+}
+
+.home-upcoming-name {
+    min-height: 3.5rem;
+    margin: 0;
+    color: #006664;
+    font-size: 1.35rem;
+    line-height: 1.45;
+}
+
+.home-upcoming-badge {
+    align-self: flex-start;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: #e8f4ef;
+    color: #006664;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.home-upcoming-meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    color: #006664;
+    font-weight: 600;
+}
+
+.home-upcoming-meta svg {
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
+}
+
+.home-upcoming-description {
+    margin: 0;
+    color: #667085;
+    line-height: 1.6;
+}
+
+.home-activities-container {
+    width: 100%;
+    max-width: none;
+    padding-right: clamp(1.5rem, 7vw, 7rem);
+    padding-left: clamp(1.5rem, 7vw, 7rem);
+}
+
+.home-activities-row > div {
+    display: flex;
+}
+
+/* การ์ดและภาพกิจกรรม */
+.home-activities-row .activity-card {
+    width: 100%;
+}
+
+.home-activity-image {
+    height: clamp(240px, 19vw, 320px) !important;
+}
+
+/* การปรับรายการกิจกรรมบนหน้าจอขนาดเล็ก */
+@media (max-width: 767.98px) {
+    .home-activities-section {
+        padding: 3.5rem 0;
+    }
+
+    .home-activities-container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.section-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-header span{
+
+    color:#006664;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.section-header h2{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin:15px 0;
+
+}
+
+.section-header p{
+
+    color:#666;
+
+}
+
+.activity-card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.activity-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.activity-image{
+
+    height:260px;
+
+    overflow:hidden;
+
+}
+
+.activity-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.activity-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.activity-content{
+
+    padding:30px;
+
+}
+
+.activity-content small{
+
+    color:#006664;
+
+}
+
+.activity-content h3{
+
+    margin:15px 0;
+
+    font-size:28px;
+
+}
+
+.activity-content p{
+
+    color:#666;
+
+}
+
+.read-more{
+
+    color:#006664;
+
+    font-weight:600;
+
+}

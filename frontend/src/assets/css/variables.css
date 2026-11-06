@@ -1,0 +1,21 @@
+/* จุดประสงค์: รวมตัวแปร CSS กลางสำหรับธีมและสีของเว็บไซต์ */
+/* ชุดตัวแปรสีและค่าธีมกลาง */
+:root{
+    --primary:#006664;
+    --primary-dark:#006664;
+    --highlight:#B2BB1E;
+    --white:#FFFFFF;
+
+    --bs-primary:#006664;
+    --bs-success:#006664;
+    --bs-success-rgb:0,102,100;
+    --bs-warning:#B2BB1E;
+    --bs-warning-rgb:178,187,30;
+    --bs-light:#FFFFFF;
+    --bs-secondary:#FFFFFF;
+
+    --secondary:#FFFFFF;
+    --text:#212529;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+}

@@ -1,0 +1,606 @@
+/* จุดประสงค์: กำหนดรูปแบบร่วมของหน้าเว็บ ปุ่ม ฟอร์ม และองค์ประกอบทั่วไป */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Prompt',sans-serif;
+
+    background:#FFFFFF;
+
+    color:#006664;
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+/* รูปแบบส่วนเนื้อหาและหัวข้อ */
+.section{
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#006664;
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+    margin-bottom:60px;
+
+}
+
+/* รูปแบบปุ่มและสถานะการโต้ตอบ */
+.btn-ku{
+
+    background:#006664;
+
+    color:#FFFFFF;
+
+    border-radius:40px;
+
+    padding:14px 35px;
+
+    transition:.35s;
+
+    border:none;
+
+}
+
+.btn-ku:hover{
+
+    background:#B2BB1E;
+
+    color:#006664;
+
+    transform:translateY(-3px);
+
+}
+
+.btn,
+.btn-primary,
+.btn-success,
+.btn-outline-success,
+.btn-outline-primary,
+.btn-ku,
+.login-btn,
+.member-topbar-add-btn {
+    transition: all .2s ease;
+}
+
+.btn,
+.btn-primary,
+.btn-success,
+.btn-ku,
+.login-btn,
+.member-topbar-add-btn,
+.btn-success:focus,
+.btn-success:active,
+.btn-success:visited,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+    background:#006664 !important;
+    border-color:#006664 !important;
+    color:#FFFFFF !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-success:hover,
+.btn-ku:hover,
+.login-btn:hover,
+.member-topbar-add-btn:hover {
+    background:#B2BB1E !important;
+    border-color:#B2BB1E !important;
+    color:#FFFFFF !important;
+}
+
+.btn-outline-success,
+.btn-outline-primary {
+    background:#FFFFFF !important;
+    border-color:#006664 !important;
+    color:#006664 !important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-primary:hover {
+    background:#B2BB1E !important;
+    border-color:#B2BB1E !important;
+    color:#006664 !important;
+}
+
+.btn.admin-table-action-edit,
+.btn.admin-table-action-edit:focus,
+.btn.admin-table-action-edit:active {
+    background:#FFC107 !important;
+    border-color:#FFC107 !important;
+    color:#212529 !important;
+}
+
+.btn.admin-table-action-edit:hover {
+    background:#E0A800 !important;
+    border-color:#D39E00 !important;
+    color:#212529 !important;
+}
+
+.btn.admin-table-action-delete,
+.btn.admin-table-action-delete:focus,
+.btn.admin-table-action-delete:active {
+    background:#DC3545 !important;
+    border-color:#DC3545 !important;
+    color:#FFFFFF !important;
+}
+
+.btn.admin-table-action-delete:hover {
+    background:#BB2D3B !important;
+    border-color:#B02A37 !important;
+    color:#FFFFFF !important;
+}
+
+.bg-success,
+.badge.bg-success {
+    color:#FFFFFF !important;
+    background-color:#006664 !important;
+    border-color:#006664 !important;
+}
+
+.text-success,
+.text-primary,
+.border-success,
+.border-primary {
+    color:#006664 !important;
+}
+
+.bg-warning,
+.badge.bg-warning,
+.text-warning {
+    background-color:#B2BB1E !important;
+    color:#006664 !important;
+}
+
+.shadow-card{
+
+    border:none;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.shadow-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.15);
+
+}
+
+.admin-dashboard-heading{
+    display:flex;
+    align-items:center;
+    min-height:92px;
+    padding:1.25rem 1.5rem;
+    border:1px solid #e5f0e8;
+    border-left:4px solid #006664;
+    border-radius:18px;
+    background:linear-gradient(135deg,#ffffff 0%,#f4fbf6 100%);
+    box-shadow:0 8px 24px rgba(15,23,42,.05);
+}
+
+.admin-dashboard-kicker{
+    display:block;
+    margin-bottom:.25rem;
+    color:#006664;
+    font-size:.75rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.admin-dashboard-title{
+    margin:0;
+    color:#17251d;
+    font-size:clamp(1.45rem,2.3vw,2rem);
+    font-weight:800;
+}
+
+.admin-dashboard-subtitle{
+    margin-top:.35rem;
+    color:#64748b;
+    font-size:.9rem;
+}
+
+.admin-dashboard-panels > div > .card{
+    height:100%;
+}
+
+.admin-profile-page{
+    max-width:1180px;
+    margin:0 auto;
+}
+
+.admin-profile-hero,
+.admin-profile-card{
+    border:1px solid #e5f0e8;
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 12px 30px rgba(15,23,42,.06);
+}
+
+.admin-profile-hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:1.25rem;
+    padding:1.35rem 1.6rem;
+    background:linear-gradient(135deg,#f5fcf7 0%,#ffffff 70%);
+    border-left:4px solid #006664;
+}
+
+.admin-profile-eyebrow{
+    display:block;
+    margin-bottom:.3rem;
+    color:#006664;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.admin-profile-name{
+    margin:0;
+    color:#15241b;
+    font-size:clamp(1.45rem,2.5vw,2.1rem);
+    font-weight:800;
+}
+
+.admin-profile-email{
+    color:#64748b;
+    font-size:.9rem;
+}
+
+.admin-profile-role,
+.admin-profile-status{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    color:#006664;
+    font-size:.8rem;
+    font-weight:800;
+}
+
+.admin-profile-role{
+    padding:.65rem .9rem;
+    border:1px solid #006664;
+    border-radius:999px;
+    background:#effaf2;
+}
+
+.admin-profile-card{
+    padding:1.5rem;
+}
+
+.admin-profile-identity{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:linear-gradient(160deg,#006664 0%,#006664 65%,#006664 100%);
+    border:0;
+    color:#fff;
+    padding:2rem 1.5rem;
+}
+
+.admin-profile-avatar-wrap{
+    position:relative;
+    margin-bottom:1rem;
+}
+
+.admin-profile-avatar{
+    width:148px;
+    height:148px;
+    border:5px solid rgba(255,255,255,.9);
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+
+.admin-profile-online{
+    position:absolute;
+    right:4px;
+    bottom:8px;
+    display:grid;
+    width:30px;
+    height:30px;
+    place-items:center;
+    border:3px solid #006664;
+    border-radius:50%;
+    background:#fff;
+    color:#006664;
+}
+
+.admin-profile-identity h3{
+    margin:.25rem 0 .25rem;
+    font-size:1.35rem;
+    font-weight:800;
+}
+
+.admin-profile-identity p{
+    margin:0 0 1rem;
+    color:rgba(255,255,255,.8);
+    font-size:.9rem;
+    word-break:break-word;
+}
+
+.admin-profile-identity .admin-profile-status{
+    color:#fff;
+}
+
+.admin-profile-upload{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    width:100%;
+    margin-top:1.5rem;
+    padding:.75rem 1rem;
+    border:1px solid rgba(255,255,255,.7);
+    border-radius:12px;
+    background:#fff;
+    color:#006664;
+    cursor:pointer;
+    font-size:.88rem;
+    font-weight:700;
+}
+
+.admin-profile-upload input{
+    display:none;
+}
+
+.admin-profile-section-heading{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:1.2rem;
+    color:#006664;
+}
+
+.admin-profile-section-heading h3{
+    margin:0;
+    color:#17251d;
+    font-size:1.2rem;
+    font-weight:800;
+}
+
+.admin-profile-account-heading{
+    margin-top:1.5rem;
+    padding-top:1.35rem;
+    border-top:1px solid #edf3ee;
+}
+
+.admin-profile-label{
+    display:block;
+    margin-bottom:.45rem;
+    color:#334155;
+    font-size:.82rem;
+    font-weight:700;
+}
+
+.admin-profile-info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.75rem;
+}
+
+.admin-profile-info-item{
+    display:flex;
+    align-items:center;
+    gap:.7rem;
+    min-width:0;
+    padding:.75rem;
+    border:1px solid #edf3ee;
+    border-radius:13px;
+    background:#f8fbf9;
+}
+
+.admin-profile-info-icon{
+    display:grid;
+    width:32px;
+    height:32px;
+    flex:0 0 32px;
+    place-items:center;
+    border-radius:10px;
+    background:#e3f5e9;
+    color:#006664;
+}
+
+.admin-profile-info-item small,
+.admin-profile-info-item strong{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.admin-profile-info-item small{
+    color:#64748b;
+    font-size:.7rem;
+}
+
+.admin-profile-info-item strong{
+    margin-top:.15rem;
+    color:#1f2937;
+    font-size:.85rem;
+}
+
+.admin-profile-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.65rem;
+    margin-top:1.5rem;
+    padding-top:1.25rem;
+    border-top:1px solid #edf3ee;
+}
+
+@media (max-width:767px){
+    .admin-dashboard-heading{
+        min-height:auto;
+        padding:1rem 1.1rem;
+    }
+
+    .admin-profile-hero{
+        align-items:flex-start;
+        flex-direction:column;
+        padding:1.1rem 1.2rem;
+    }
+
+    .admin-profile-card{
+        padding:1.15rem;
+    }
+
+    .admin-profile-info-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+/* กำหนดลำดับและโทนสีปุ่มของหน้าต่าง SweetAlert ให้เหมือนกันทั้งแอป */
+.swal2-actions{
+    flex-direction:row !important;
+    gap:12px !important;
+}
+
+.swal2-confirm{
+    background:#006664 !important;
+    border:2px solid #006664 !important;
+    border-radius:.6rem !important;
+    color:#fff !important;
+    font-family:'Prompt',sans-serif !important;
+    font-weight:600 !important;
+    min-width:84px;
+    padding:.65rem 1.25rem !important;
+    box-shadow:none !important;
+}
+
+.swal2-confirm:hover,
+.swal2-confirm:focus{
+    background:#005653 !important;
+    border-color:#005653 !important;
+    color:#fff !important;
+    box-shadow:0 0 0 .2rem rgba(0,102,100,.2) !important;
+}
+
+.swal2-cancel{
+    background:#fff !important;
+    border:2px solid #006664 !important;
+    color:#006664 !important;
+    border-radius:.6rem !important;
+    font-family:'Prompt',sans-serif !important;
+    font-weight:600 !important;
+    min-width:84px;
+    padding:.65rem 1.25rem !important;
+    box-shadow:none !important;
+}
+
+.swal2-cancel:hover,
+.swal2-cancel:focus{
+    background:#eef7f6 !important;
+    border-color:#005653 !important;
+    color:#006664 !important;
+    box-shadow:0 0 0 .2rem rgba(0,102,100,.15) !important;
+}
+
+/* ==========================================
+   GLOBAL LAYOUT
+========================================== */
+
+:root{
+    --navbar-height:72px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Prompt',sans-serif;
+    background:#F8F9FA;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* โครงสร้างหลักของหน้าเว็บ */
+
+.main-content{
+    padding-top:var(--navbar-height);
+    min-height:100vh;
+    width:100%;
+}
+
+.main-content.home-main-content{
+    padding-top:calc(var(--navbar-height) + 12px);
+}
+
+.main-content.login-main-content{
+    padding-top:0;
+}
+
+/* ป้องกันช่องว่างจาก section แรก */
+
+.main-content > *:first-child{
+    margin-top:0 !important;
+}
+
+/* รูปภาพ */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ปรับเลย์เอาต์สำหรับหน้าจอขนาดต่าง ๆ */
+
+@media (max-width:991px){
+
+    :root{
+        --navbar-height:80px;
+    }
+
+}
